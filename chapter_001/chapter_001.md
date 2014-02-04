@@ -28,7 +28,7 @@ Dylan can auto-build a project for you using the "make-dylan-app" command.  Run 
 make-dylan-app hello-world
 ```
 
-###A basic Dylan Project structures
+###The basic Dylan project structure
 
 make-dylan-app will generate the following directory structure:
 
@@ -68,5 +68,19 @@ main(application-name(), application-arguments());
 ```
 
 ##Compiling your project
+
+To compile your project, run the following from the root directory of your hello-world project:
+
+```bash
+dylan-compiler -build hello-world.lid
+```
+
+There will be tons of output from the compiler.  After the build has completed, you should find an executable in a newly created directory in the project: _build/bin.  To run your app, type the following:
+
+```bash
+_build/bin/hello-world
+```
+
+Congratulations.  You are a mystical sorcerer.
 
 ##Notes
