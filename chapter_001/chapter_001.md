@@ -28,7 +28,31 @@ Dylan can auto-build a project for you using the "make-dylan-app" command.  Run 
 make-dylan-app hello-world
 ```
 
-the source for hello-world.dylan
+###A basic Dylan Project structures
+
+make-dylan-app will generate the following directory structure:
+
+```
+└── hello-world
+    ├── hello-world.dylan
+    ├── hello-world.lid
+    ├── library.dylan
+    └── registry
+        └── generic
+            └── hello-world
+```
+
+Here is a quick breakdown of what each component in the project is:
+
+* hello-world.dylan: the main source file.
+* hello-world.lid
+* library.dylan
+* registry
+
+###Looking at the source structure
+
+The source for hello-world.dylan
+
 ```dylan
 Module: hello-world
 Synopsis: 
