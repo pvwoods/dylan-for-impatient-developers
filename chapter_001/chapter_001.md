@@ -8,6 +8,18 @@ This chapters goals include:
 
 ##Installing OpenDylan
 
+###OS X
+
+the 2013.2 release of Open Dylan can be installed by running the commands below.  An install script is also available in chapter_001/projects/install-dylan/darwin
+
+```bash
+curl -O http://opendylan.org/downloads/opendylan/2013.2/opendylan-2013.2-x86-darwin.tar.bz2
+tar -xvzf opendylan-2013.2-x86-darwin.tar.bz2
+sudo mv opendylan-2013.2 /opt/
+echo "export PATH=/opt/opendylan-2013.2/bin:$PATH" >> ~/.bashrc
+source ~/.bashrc
+```
+
 ##Creating your first project
 
 Dylan can auto-build a project for you using the "make-dylan-app" command.  Run the following command in the directory you keep all your dylan projects (for me that is /home/philipwoods/workspace):
@@ -16,7 +28,20 @@ Dylan can auto-build a project for you using the "make-dylan-app" command.  Run 
 make-dylan-app hello-world
 ```
 
-2.
+the source for hello-world.dylan
+```dylan
+Module: hello-world
+Synopsis: 
+Author: 
+Copyright: 
+
+define function main (name :: <string>, arguments :: <vector>)
+  format-out("Hello, world!\n");
+  exit-application(0);
+end function main;
+
+main(application-name(), application-arguments());
+```
 
 ##Compiling your project
 

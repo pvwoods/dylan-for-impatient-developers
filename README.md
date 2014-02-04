@@ -1,0 +1,1 @@
+For now, this serves as a collection of notes that aid the way that I learn.  It also acts as a way to centralize a lot of data that is dispersed all over the place.  Maybe int he future I will formalize things more.
