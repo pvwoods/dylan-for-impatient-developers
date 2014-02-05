@@ -16,7 +16,7 @@ the 2013.2 release of Open Dylan can be installed by running the commands below.
 curl -O http://opendylan.org/downloads/opendylan/2013.2/opendylan-2013.2-x86-darwin.tar.bz2
 tar -xvzf opendylan-2013.2-x86-darwin.tar.bz2
 sudo mv opendylan-2013.2 /opt/
-echo "export PATH=/opt/opendylan-2013.2/bin:$PATH" >> ~/.bashrc
+echo "export PATH=/opt/opendylan-2013.2/bin:$PATH" >> ~/.bash_profile
 source ~/.bashrc
 ```
 
