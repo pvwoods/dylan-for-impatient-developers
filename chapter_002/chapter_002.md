@@ -24,9 +24,31 @@ end;
 _notice:_ We have learned in the last statement how to check a vectors size, how to print to the terminal, and access specific elements of a vector.
 
 ###A better error handler
+
+lets add a better way to show our error.  We can add a help message with some nice formatting by adding a new function:
+
+```dylan
+define function show-help()
+  format-out("json-to-objc usage:\n\n\tjson-to-objc <filename>\n\n");
+end;
+```
+
+and changing our line that prints 'please provide a source file' to
+
+```dylan
+show-help()
+```
  
 ###File IO
 ###JSON parsing
 ###Generating the output
 
 ####JSON to NS type mapping
+
+###A poor-man debugging implementation in Dylan
+
+If for any reason you get stuck and need to output something in Dylan, you can use the poor-man debugging solution: format-out.  format-out can be thought of as printf (or even more accurately, NSLog) with different symbols.  In most cases, you can just use the following to serialize an object and print it to the terminal (note the \n is just a line break):
+
+```dylan
+format-out("%=\n", my-thing);
+```
