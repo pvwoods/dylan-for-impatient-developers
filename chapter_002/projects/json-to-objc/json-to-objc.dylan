@@ -72,7 +72,7 @@ define function string-table-to-objc-model-header(json :: <string-table>, model-
         implementation-constructor-string :=
           concatenate(
             implementation-constructor-string,
-            "        ", key, " = [dictionary objectForKey:@\"", key, "\"]];\n"
+            "        ", key, " = [dictionary objectForKey:@\"", key, "\"];\n"
           );
     end;
   end;
