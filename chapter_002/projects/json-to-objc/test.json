@@ -1,0 +1,9 @@
+{
+  "name": "Albert Einstein",
+  "age": 13,
+  "isResident": false,
+  "accessPoints": [12,334,525,1654],
+  "meta": {
+    "homepage":"http://example.com"
+  }
+}
