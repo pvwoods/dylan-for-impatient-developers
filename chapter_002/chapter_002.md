@@ -29,11 +29,16 @@ lets add a better way to show our error.  We can add a help message with some ni
 
 ```dylan
 define function show-help()
-  format-out("json-to-objc usage:\n\n\tjson-to-objc <filename>\n\n");
+  format-out(
+    "json-to-objc usage:\n"
+    "\n\tjson-to-objc <filename>\n\n"
+  );
 end;
 ```
 
-and changing our line that prints 'please provide a source file' to
+Notice that there are the two seperate strings in the format-out.  In Dylan, strings next to each other are concantenatedby the compiler, so we can take advantage of that to make some of the formatting a little easier to read.
+
+Now we'll change our line that prints 'please provide a source file' to
 
 ```dylan
 show-help()
